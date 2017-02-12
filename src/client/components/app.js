@@ -1,4 +1,4 @@
-import "./app.scss";
+import "../scss/app.scss";
 
 import React, {Component} from "react";
 
@@ -8,11 +8,18 @@ class AppContainer extends Component {
 	}
 
 	render() {
+		const {main, sidebar} = this.props;
 		return (
-			<section>
-				<h1>Hello World</h1>
-				<button onClick={this._click.bind(this)}>I am button plz click</button>
-			</section>
+			<div className="c-application">
+				<div className="inner">
+					<div className="sidebar">
+						{sidebar}
+					</div>
+					<div className="main">
+						{main}
+					</div>
+				</div>
+			</div>
 		);
 	}
 
