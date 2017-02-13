@@ -1,3 +1,5 @@
+// gulp server:test:dev
+
 import {Dispatcher} from '../shared/dispatcher';
 import * as A from '../shared/actions';
 
