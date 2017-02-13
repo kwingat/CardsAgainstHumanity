@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {ContainerBase} from '../lib/component';
 
 import '../scss/game.scss';

@@ -1,31 +1,42 @@
+import React from "react";
+import {ContainerBase} from '../lib/component';
 import "../scss/app.scss";
+import dialogTypes from './dialogs';
 
-import React, {Component} from "react";
+class AppContainer extends ContainerBase {
+    componentWillMount() {
+        const {stores:{app}} = this.context;
+        this.subscribe(app.dialogs$, dialogs => this.setState({dialogs}));
+    }
 
-class AppContainer extends Component {
-	componentDidMount() {
-		console.log("HEY THERE");
-	}
+    render() {
+        const {main, sidebar} = this.props;
+        const {dialogs} = this.state;
+        const dialogStack = dialogs.map(dialog => {
+            const DialogComponent = dialogTypes[dialog.id];
+            return <DialogComponent {...dialog.props} key={dialog.id}/>;
+        });
 
-	render() {
-		const {main, sidebar} = this.props;
-		return (
-			<div className="c-application">
-				<div className="inner">
-					<div className="sidebar">
-						{sidebar}
-					</div>
-					<div className="main">
-						{main}
-					</div>
-				</div>
-			</div>
-		);
-	}
+        return (
+            <div className={`c-application ${dialogStack.length ? 'dialogs-open' : 'dialogs-closed'}`}>
+                <div className="dialogs">
+                    {dialogStack}
+                </div>
+                <div className="inner">
+                    <div className="sidebar">
+                        {sidebar}
+                    </div>
+                    <div className="main">
+                        {main}
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
-	_click() {
-		console.log("STUFF");
-	}
+    _click() {
+        console.log("STUFF");
+    }
 }
 
 export default AppContainer;

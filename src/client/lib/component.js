@@ -1,4 +1,4 @@
-import React, {Children, Component, PropTypes} from 'react';
+import {Children, Component, PropTypes} from 'react';
 
 export class StoreProvider extends Component {
     static propTypes = {
@@ -27,7 +27,7 @@ export class ContainerBase extends Component {
         services: PropTypes.object.isRequired
     };
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this._disposeFunctions = [];
     }
@@ -44,7 +44,7 @@ export class ContainerBase extends Component {
 
     // Could use Redux
     dispatch(action) {
-        this.contect.services.dispatcher.emit(action);
+        this.context.services.dispatcher.emit(action);
     }
 
     request(action) {
