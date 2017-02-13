@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import {ContainerBase} from '../lib/component';
 
 import '../scss/game.scss';
 
-class GameContainer extends Component {
+class GameContainer extends ContainerBase {
     render() {
         return (
             <div>Game</div>
@@ -10,7 +11,7 @@ class GameContainer extends Component {
     }
 }
 
-class GameSidebar extends Component {
+class GameSidebar extends ContainerBase {
     render() {
         return(
             <div>Game Sidebar</div>

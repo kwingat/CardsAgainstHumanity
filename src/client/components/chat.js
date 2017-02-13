@@ -51,7 +51,7 @@ export default class Chat extends Component {
                         className="top-border"
                         placeholder={opSendMessage.can ? 'enter a message' : 'please login to chat'}
                         ref={c => this._text = c}
-                        disable={!opSendMessage.can}/>
+                        disabled={!opSendMessage.can}/>
                 </form>
 
             </section>
