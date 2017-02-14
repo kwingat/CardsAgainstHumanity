@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import {Observable} from 'rxjs';
-import * as A from './actions';
+import _ from "lodash";
+import {Observable} from "rxjs";
+import * as A from "./actions";
 
 export class Dispatcher {
     constructor() {
@@ -64,15 +64,15 @@ export class Dispatcher {
     }
 
     onRequest$(type) {
-        return this.on$((type).filter(action => action.status == A.STATUS_REQUEST));
+        return this.on$(type).filter(action => action.status == A.STATUS_REQUEST);
     }
 
     onFail$(type) {
-        return this.on$((type).filter(action => action.status == A.STATUS_FAIL));
+        return this.on$(type).filter(action => action.status == A.STATUS_FAIL);
     }
 
     onSuccess$(type) {
-        return this.on$((type).filter(action => action.status == A.STATUS_SUCCESS));
+        return this.on$(type).filter(action => action.status == A.STATUS_SUCCESS);
     }
 
     emit(action) {
