@@ -46,15 +46,15 @@ export class Dispatcher {
     }
 
     onRequest(typeOrCallbacks, callback = null) {
-        return this.on(typeOrCallbacks, callback, A.actions.STATUS_REQUEST);
+        return this.on(typeOrCallbacks, callback, A.STATUS_REQUEST);
     }
 
     onFail(typeOrCallbacks, callback = null) {
-        return this.on(typeOrCallbacks, callback, A.actions.STATUS_FAIL);
+        return this.on(typeOrCallbacks, callback, A.STATUS_FAIL);
     }
 
     onSuccess(typeOrCallbacks, callback = null) {
-        return this.on(typeOrCallbacks, callback, A.actions.STATUS_SUCCESS);
+        return this.on(typeOrCallbacks, callback, A.STATUS_SUCCESS);
     }
 
     on$(type) {
@@ -64,15 +64,15 @@ export class Dispatcher {
     }
 
     onRequest$(type) {
-        return this.on$((type).filter(action => action.status == A.actions.STATUS_REQUEST));
+        return this.on$((type).filter(action => action.status == A.STATUS_REQUEST));
     }
 
     onFail$(type) {
-        return this.on$((type).filter(action => action.status == A.actions.STATUS_FAIL));
+        return this.on$((type).filter(action => action.status == A.STATUS_FAIL));
     }
 
     onSuccess$(type) {
-        return this.on$((type).filter(action => action.status == A.actions.STATUS_SUCCESS));
+        return this.on$((type).filter(action => action.status == A.STATUS_SUCCESS));
     }
 
     emit(action) {

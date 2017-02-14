@@ -1,8 +1,8 @@
-import React from 'react';
-import * as A from '../../actions';
-import {ContainerBase} from '../../lib/component';
-import '../../scss/login.scss';
-import {TextInput} from '../control';
+import React from "react";
+import * as A from "../../actions";
+import {ContainerBase} from "../../lib/component";
+import "../../scss/login.scss";
+import {TextInput} from "../control";
 
 class LoginDialog extends ContainerBase {
     constructor(props) {
@@ -26,6 +26,10 @@ class LoginDialog extends ContainerBase {
             if (details.isLoggedIn)
                 this.dispatch(A.dialogSet(A.DIALOG_LOGIN, false));
         });
+    }
+
+    componentDidMount() {
+        this._username.input.focus();
     }
 
     render() {

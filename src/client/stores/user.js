@@ -1,7 +1,7 @@
-import {Observable, BehaviorSubject} from 'rxjs';
-import {validateName} from 'shared/validation/user';
-import * as A from '../actions';
-import {mapOp$} from 'shared/observable';
+import {BehaviorSubject} from "rxjs";
+import {validateName} from "shared/validation/user";
+import * as A from "../actions";
+import {mapOp$} from "shared/observable";
 
 const defaultDetails = {
     isLoggedIn: false,
@@ -34,7 +34,7 @@ export default class UserStore {
         });
 
         this.opLogin$ = mapOp$(
-            dispatcher.on$(A.actions.USER_LOGIN),
+            dispatcher.on$(A.USER_LOGIN),
             this.details$.map(details => !details.isLoggedIn));
     }
 }

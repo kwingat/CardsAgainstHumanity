@@ -1,7 +1,7 @@
 import React from "react";
-import {ContainerBase} from '../lib/component';
+import {ContainerBase} from "../lib/component";
 import "../scss/app.scss";
-import dialogTypes from './dialogs';
+import dialogTypes from "./dialogs";
 
 class AppContainer extends ContainerBase {
     componentWillMount() {

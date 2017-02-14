@@ -9,10 +9,10 @@ export function mapOp$(op$, can$ = Observable.of(true)) {
             if (!action.hasOwnProperty("status"))
                 return {can, inProgress: false, failed: false};
 
-            if (action.status == A.actions.STATUS_REQUEST)
+            if (action.status == A.STATUS_REQUEST)
                 return {can, inProgress: true, failed: false};
 
-            if (action.status == A.actions.STATUS_FAIL)
+            if (action.status == A.STATUS_FAIL)
                 return {can, inProgress: false, failed: true, error: action.error};
 
             return {can, inProgress: false, failed: false};

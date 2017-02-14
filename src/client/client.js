@@ -50,13 +50,13 @@ function printAction(action) {
         let style = null;
 
         switch (action.status){
-            case A.actions.STATUS_REQUEST:
+            case A.STATUS_REQUEST:
                 style="color: blue";
                 break;
-            case A.actions.STATUS_FAIL:
+            case A.STATUS_FAIL:
                 style="color: red";
                 break;
-            case A.actions.STATUS_SUCCESS:
+            case A.STATUS_SUCCESS:
                 style="color: green";
                 break;
         }
