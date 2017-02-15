@@ -1,42 +1,43 @@
 export class Validator {
-    static fail(error){
-        const validator = new Validator();
-        validator.push(error);
-        return validator;
-    }
+	static fail(error) {
+		const validator = new Validator();
+		validator.push(error);
+		return validator;
+	}
 
-    static succeed() {
-        return new Validator();
-    }
+	static succeed() {
+		return new Validator();
+	}
 
-    get didFail() {
-        return this.errors.length > 0;
-    }
+	get didFail() {
+		return this.errors.length > 0;
+	}
 
-    get didSucceed() {
-        return this.error.length == 0;
-    }
+	get didSucceed() {
+		return this.errors.length == 0;
+	}
 
-    get message() {
-        return this.errors.join(" ");
-    }
+	get message() {
+		return this.errors.join(" ");
+	}
 
-    constructor(){
-        this.errors = [];
-    }
+	constructor() {
+		this.errors = [];
+	}
 
-    push(error){
-        if(error instanceof Validator) {
-            for(let message of error.errors)
-                this.errors.push(message);
-        } else {
-            this.errors.push(error);
-        }
-    }
+	push(error) {
+		if (error instanceof Validator) {
+			for (let message of error.errors)
+				this.errors.push(message);
+		} else {
+			this.errors.push(error);
+		}
+	}
 
-    assert(condition, error) {
-        if(condition) return;
+	assert(condition, error) {
+		if (condition)
+			return;
 
-        this.push(error);
-    }
+		this.push(error);
+	}
 }

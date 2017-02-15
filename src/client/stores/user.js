@@ -1,40 +1,40 @@
-import {BehaviorSubject} from "rxjs";
+import {Observable, BehaviorSubject} from "rxjs";
 import {validateName} from "shared/validation/user";
-import * as A from "../actions";
 import {mapOp$} from "shared/observable";
+import * as A from "../actions";
 
 const defaultDetails = {
-    isLoggedIn: false,
-    id: null,
-    name: null
+	isLoggedIn: false,
+	id: null,
+	name: null
 };
 
 export default class UserStore {
-    constructor({dispatcher}) {
-        this.details$ = new BehaviorSubject(defaultDetails);
+	constructor({dispatcher, socket}) {
+		this.details$ = dispatcher.on$(A.USER_DETAILS_SET)
+			.map(a => a.details)
+			.startWith(defaultDetails)
+			.publishReplay(1);
 
-        this.details$.subscribe(details =>
-            Object.keys(details).forEach(k => this[k] = details[k]));
+		this.details$.connect();
 
-        dispatcher.onRequest({
-            [A.USER_LOGIN]: (action) => {
-                const validator = validateName(action.name);
-                if (validator.didFail) {
-                    dispatcher.fail(action, validator.message);
-                    return;
-                }
+		this.details$.subscribe(details => 
+			Object.keys(details).forEach(k => this[k] = details[k]));
 
-                dispatcher.succeed(action);
-                this.details$.next({
-                    isLoggedIn: true,
-                    id: 4432,
-                    name: action.name
-                });
-            }
-        });
+		dispatcher.onRequest({
+			[A.USER_LOGIN]: (action) => {
+				const validator = validateName(action.name);
+				if (validator.didFail) {
+					dispatcher.fail(action, validator.message);
+					return;
+				}
 
-        this.opLogin$ = mapOp$(
-            dispatcher.on$(A.USER_LOGIN),
-            this.details$.map(details => !details.isLoggedIn));
-    }
+				socket.emit("action", action);
+			}
+		});
+
+		this.opLogin$ = mapOp$(
+			dispatcher.on$(A.USER_LOGIN),
+			this.details$.map(details => !details.isLoggedIn));
+	}
 }
