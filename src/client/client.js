@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import {Router, browserHistory as history} from 'react-router';
 import _ from 'lodash';
+import io from 'socket.io-client';
 
 import "./scss/client.scss";
 import * as A from './actions';
@@ -9,17 +10,23 @@ import {StoreProvider} from './lib/component';
 import {Dispatcher} from 'shared/dispatcher';
 import createStores from './stores';
 
+// ----------------------
 // Services
 const dispatcher = new Dispatcher();
-const services = {dispatcher};
+const socket = io();
+const services = {dispatcher, socket};
 
 if (IS_DEVELOPMENT) {
     dispatcher.on('*', printAction);
 }
 
+socket.on('action', action => dispatcher.emit(action));
+
+// ----------------------
 // Stores
 const stores = createStores(services);
 
+// ----------------------
 // Render
 function main() {
     const routes = require("./routes").default();
@@ -32,7 +39,7 @@ function main() {
         document.getElementById("mount"));
 }
 
-
+// ----------------------
 // Misc
 if (module.hot) {
     module.hot.accept("./routes", () => {
@@ -40,24 +47,26 @@ if (module.hot) {
     });
 }
 
+// ----------------------
 // GO!
 main();
 
+// ----------------------
 // Helpers
 function printAction(action) {
 
-    if(action.hasOwnProperty("status")){
+    if (action.hasOwnProperty("status")) {
         let style = null;
 
-        switch (action.status){
+        switch (action.status) {
             case A.STATUS_REQUEST:
-                style="color: blue";
+                style = "color: blue";
                 break;
             case A.STATUS_FAIL:
-                style="color: red";
+                style = "color: red";
                 break;
             case A.STATUS_SUCCESS:
-                style="color: green";
+                style = "color: green";
                 break;
         }
 
@@ -67,6 +76,6 @@ function printAction(action) {
     }
 
     const result = _.omit(action, ["type", "status"]);
-    if(_.keys(result).length)
+    if (_.keys(result).length)
         console.log(result);
 }
