@@ -6,7 +6,8 @@ export default function Card(props) {
     const classes = [
         'c-card',
         type,
-        card ? 'front' : 'back' `style-${style}`,
+        card ? 'front' : 'back',
+        `style-${style}`,
         canZoom ? 'can-zoom' : '',
         isSelectable ? 'is-selectable' : ''
     ];
