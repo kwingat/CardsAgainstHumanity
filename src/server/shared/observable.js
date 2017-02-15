@@ -1,7 +1,8 @@
-import {Observable} from 'rxjs';
-import * as A from './actions';
+import {Observable} from "rxjs";
+import * as A from "./actions";
 
 export function mapOp$(op$, can$ = Observable.of(true)) {
+
     const operation$ = op$
         .startWith({})
         .combineLatest(can$)

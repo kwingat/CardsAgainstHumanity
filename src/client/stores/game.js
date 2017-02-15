@@ -6,32 +6,54 @@ import * as _ from "lodash";
 const defaultView = {
     id: 42,
     title: "Nelson's Game",
-    step: A.STEP_SETUP,
+    step: A.STEP_CHOOSE_WHITES,
     options: {
         scoreLimit: 5,
         sets: ["1ed"]
     },
     players: [
-        {id: 1, name: "nelson", score: 0, isCzar: true, isPlaying: true, isWinner: false},
-        {id: 2, name: "kyle", score: 0, isCzar: false, isPlaying: true, isWinner: false},
-        {id: 3, name: "ashley", score: 0, isCzar: false, isPlaying: true, isWinner: false},
-        {id: 4, name: "cj", score: 0, isCzar: false, isPlaying: true, isWinner: false},
-        {id: 5, name: "olivia", score: 0, isCzar: false, isPlaying: true, isWinner: false},
-        {id: 6, name: "bently", score: 0, isCzar: false, isPlaying: false, isWinner: true},
+        {id: 1, name: "kyle", score: 3, isCzar: false, isPlaying: true, isWinner: false},
+        {id: 2, name: "ashley", score: 1, isCzar: false, isPlaying: true, isWinner: false},
+        {id: 3, name: "cj", score: 4, isCzar: true, isPlaying: false, isWinner: false},
+        {id: 4, name: "olivia", score: 2, isCzar: false, isPlaying: false, isWinner: false},
     ],
     messages: [
-        {name: "Nelson", message: "abc"},
-        {name: "Nelson", message: "abc"},
-        {name: "Nelson", message: "abc"}
+        {index: 1, name: "Nelson", message: "abc"},
+        {index: 2, name: "Nelson", message: "abc"},
+        {index: 3, name: "Nelson", message: "abc"}
     ],
-    round: null,
+    round: {
+        blackCard: {
+            id: 1,
+            text: 'blah blah blah',
+            set: '1ed',
+            whiteCardCount: 3
+        },
+        stacks: [
+            {id: 1, count: 3},
+            {id: 2, count: 1},
+            {id: 3, count: 2},
+        ]
+    },
     time: null
 };
 
 const defaultPlayerState = {
     id: 1,
-    hand: [],
-    stack: null
+    hand: [
+        {id: 1, text: 'Card 1', set: "1ed"},
+        {id: 2, text: 'Card 2', set: "1ed"},
+
+        {id: 4, text: 'Card 4', set: "1ed"},
+        {id: 5, text: 'Card 5', set: "1ed"},
+        {id: 6, text: 'Card 6', set: "1ed"}
+    ],
+    stack: {
+        id: 2,
+        cards: [
+            {id: 3, text: 'Card 3', set: "1ed"}
+        ]
+    }
 };
 
 export default class GameStore {
@@ -75,14 +97,14 @@ export default class GameStore {
             dispatcher.on$(A.GAME_SELECT_CARD),
             playerAndGame$.map(([game, player]) => {
                 const ourPlayer = _.find(game.players, {id: player.id});
-                return ourPlayer && game.stop == game.step == A.STEP_CHOOSE_WHITES && ourPlayer.isPlaying;
+                return ourPlayer && game.step == A.STEP_CHOOSE_WHITES && ourPlayer.isPlaying;
             }));
 
         this.opSelectStack$ = mapOp$(
             dispatcher.on$(A.GAME_SELECT_STACK),
             playerAndGame$.map(([game, player]) => {
                 const ourPlayer = _.find(game.players, {id: player.id});
-                return ourPlayer && game.stop == game.step == A.STEP_JUDGE_STACKS && ourPlayer.isCzar;
+                return ourPlayer && game.step == A.STEP_JUDGE_STACKS && ourPlayer.isCzar;
             }));
 
         this.opSendMessage$ = mapOp$(dispatcher.on$(A.GAME_SEND_MESSAGE), isLoggedIn$);

@@ -12,6 +12,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "no-debugger": 1,
     "semi": [
       "error",
       "always"
