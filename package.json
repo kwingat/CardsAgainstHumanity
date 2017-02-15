@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "node ./tests.js",
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "poastinstall":"gulp build"
   },
-  "author": "Nelson LaQuet",
+  "author": "kdub",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.17.0",
@@ -40,6 +41,7 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.16.4",
     "node-sass": "^3.10.1",
+    "npm-cli": "^0.1.0",
     "pug": "^2.0.0-beta6",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
