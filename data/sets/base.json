@@ -1,276 +1,96 @@
 {
   "name": "Base",
   "blackCards": [
-    {
-      "text": "Why can't I sleep at night?"
-    },
-    {
-      "text": "I got 99 problems but {} ain't one."
-    },
-    {
-      "text": "What's a girl's best friend?"
-    },
-    {
-      "text": "What's that smell?"
-    },
-    {
-      "text": "This is the way the world ends \/ This is the way the world ends \/ Not with a bang but with {}."
-    },
-    {
-      "text": "What is Batman's guilty pleasure?"
-    },
-    {
-      "text": "TSA guidelines now prohibit {} on airplanes."
-    },
-    {
-      "text": "What ended my last relationship?"
-    },
-    {
-      "text": "MTV's new reality show features eight washed-up celebrities living with {}."
-    },
-    {
-      "text": "I drink to forget {}."
-    },
-    {
-      "text": "I'm sorry, Professor, but I couldn't complete my homework because of {}."
-    },
-    {
-      "text": "Alternative medicine is now embracing the curative powers of {}."
-    },
-    {
-      "text": "What's that sound?"
-    },
-    {
-      "text": "What's the next Happy Meal&reg; toy?"
-    },
-    {
-      "text": "It's a pity that kids these days are all getting involved with {}."
-    },
-    {
-      "text": "In the new Disney Channel Original Movie, Hannah Montana struggles with {} for the first time."
-    },
-    {
-      "text": "{}. That's how I want to die."
-    },
-    {
-      "text": "What does Dick Cheney prefer?"
-    },
-    {
-      "text": "What's the most emo?"
-    },
-    {
-      "text": "Instead of coal, Santa now gives the bad children {}."
-    },
-    {
-      "text": "Next from J.K. Rowling: Harry Potter and the Chamber of {}."
-    },
-    {
-      "text": "A romantic, candlelit dinner would be incomplete without {}."
-    },
-    {
-      "text": "White people like {}."
-    },
-    {
-      "text": "{}. Betcha can't have just one!"
-    },
-    {
-      "text": "War!<br><br>What is it good for?"
-    },
-    {
-      "text": "BILLY MAYS HERE FOR {}."
-    },
-    {
-      "text": "{}. High five, bro."
-    },
-    {
-      "text": "During sex, I like to think about {}."
-    },
-    {
-      "text": "What did I bring back from Mexico?"
-    },
-    {
-      "text": "What are my parents hiding from me?"
-    },
-    {
-      "text": "What will always get you laid?"
-    },
-    {
-      "text": "What would grandma find disturbing, yet oddly charming?"
-    },
-    {
-      "text": "What did the U.S. airdrop to the children of Afghanistan?"
-    },
-    {
-      "text": "What helps Obama unwind?"
-    },
-    {
-      "text": "What's there a ton of in heaven?"
-    },
-    {
-      "text": "Major League Baseball has banned {} for giving players an unfair advantage."
-    },
-    {
-      "text": "When I am a billionaire, I shall erect a 50-foot statue to commemorate {}."
-    },
-    {
-      "text": "What's the new fad diet?"
-    },
-    {
-      "text": "When I am the President of the United States, I will create the Department of {}."
-    },
-    {
-      "text": "{}. It's a trap!"
-    },
-    {
-      "text": "How am I maintaining my relationship status?"
-    },
-    {
-      "text": "What will I bring back in time to convince people that I am a powerful wizard?"
-    },
-    {
-      "text": "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on {}."
-    },
-    {
-      "text": "Coming to Broadway this season, {}: The Musical."
-    },
-    {
-      "text": "What's my secret power?"
-    },
-    {
-      "text": "What gives me uncontrollable gas?"
-    },
-    {
-      "text": "But before I kill you, Mr. Bond, I must show you {}."
-    },
-    {
-      "text": "What never fails to liven up the party?"
-    },
-    {
-      "text": "What am I giving up for Lent?"
-    },
-    {
-      "text": "What do old people smell like? "
-    },
-    {
-      "text": "The class field trip was completely ruined by {}."
-    },
-    {
-      "text": "When Pharaoh remained unmoved, Moses called down a plague of {}."
-    },
-    {
-      "text": "I do not know with which weapons World War III will be fought, but World War IV will be fought with {}."
-    },
-    {
-      "text": "What's Teach for America using to inspire inner city students to succeed?"
-    },
-    {
-      "text": "In Michael Jackson's final moments, he thought about {}."
-    },
-    {
-      "text": "Why do I hurt all over?"
-    },
-    {
-      "text": "Studies show that lab rats navigate mazes 50% faster after being exposed to {}."
-    },
-    {
-      "text": "Why am I sticky?"
-    },
-    {
-      "text": "What's my anti-drug?"
-    },
-    {
-      "text": "And the Academy Award for {} goes to {}."
-    },
-    {
-      "text": "For my next trick, I will pull {} out of {}."
-    },
-    {
-      "text": "{}: Good to the last drop."
-    },
-    {
-      "text": "What did Vin Diesel eat for dinner?"
-    },
-    {
-      "text": "{}: kid-tested, mother-approved."
-    },
-    {
-      "text": "What gets better with age?"
-    },
-    {
-      "text": "I never truly understood {} until I encountered {}."
-    },
-    {
-      "text": "Rumor has it that Vladimir Putin's favorite delicacy is {} stuffed with {}."
-    },
-    {
-      "text": "Lifetime&reg; presents {}, the story of {}."
-    },
-    {
-      "text": "Make a haiku."
-    },
-    {
-      "text": "In M. Night Shyamalan's new movie, Bruce Willis discovers that {} had really been {} all along."
-    },
-    {
-      "text": "{} is a slippery slope that leads to {}."
-    },
-    {
-      "text": "In a world ravaged by {}, our only solace is {}."
-    },
-    {
-      "text": "That's right, I killed {}. How, you ask? {}."
-    },
-    {
-      "text": "When I was tripping on acid, {} turned into {}."
-    },
-    {
-      "text": "{} + {} = {}."
-    },
-    {
-      "text": "What's the next superhero\/sidekick duo?"
-    },
-    {
-      "text": "Dear Abby,<br><br>I'm having some trouble with {} and would like your advice."
-    },
-    {
-      "text": "After the earthquake, Sean Penn brought {} to the people of Haiti."
-    },
-    {
-      "text": "In L.A. County Jail, word is you can trade 200 cigarettes for {}."
-    },
-    {
-      "text": "Maybe she's born with it. Maybe it's {}."
-    },
-    {
-      "text": "Life for American Indians was forever changed when the White Man introduced them to {}."
-    },
-    {
-      "text": "Next on ESPN2, the World Series of {}."
-    },
-    {
-      "text": "Step 1: {}. Step 2: {}. Step 3: Profit."
-    },
-    {
-      "text": "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is {}."
-    },
-    {
-      "text": "How did I lose my virginity?"
-    },
-    {
-      "text": "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of {}."
-    },
-    {
-      "text": "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?"
-    },
-    {
-      "text": "What don't you want to find in your Kung Pao chicken?"
-    },
-    {
-      "text": "The Smithsonian Museum of Natural History has just opened an exhibit on {}."
-    },
-    {
-      "text": "Daddy, why is Mommy crying?"
-    }
+    "Why can't I sleep at night?",
+    "I got 99 problems but {} ain't one.",
+    "What's a girl's best friend?",
+    "What's that smell?",
+    "This is the way the world ends \/ This is the way the world ends \/ Not with a bang but with {}.",
+    "What is Batman's guilty pleasure?",
+    "TSA guidelines now prohibit {} on airplanes.",
+    "What ended my last relationship?",
+    "MTV's new reality show features eight washed-up celebrities living with {}.",
+    "I drink to forget {}.",
+    "I'm sorry, Professor, but I couldn't complete my homework because of {}.",
+    "Alternative medicine is now embracing the curative powers of {}.",
+    "What's that sound?",
+    "What's the next Happy Meal&reg; toy?",
+    "It's a pity that kids these days are all getting involved with {}.",
+    "In the new Disney Channel Original Movie, Hannah Montana struggles with {} for the first time.",
+    "{}. That's how I want to die.",
+    "What does Dick Cheney prefer?",
+    "What's the most emo?",
+    "Instead of coal, Santa now gives the bad children {}.",
+    "Next from J.K. Rowling: Harry Potter and the Chamber of {}.",
+    "A romantic, candlelit dinner would be incomplete without {}.",
+    "White people like {}.",
+    "{}. Betcha can't have just one!",
+    "War!<br><br>What is it good for?",
+    "BILLY MAYS HERE FOR {}.",
+    "{}. High five, bro.",
+    "During sex, I like to think about {}.",
+    "What did I bring back from Mexico?",
+    "What are my parents hiding from me?",
+    "What will always get you laid?",
+    "What would grandma find disturbing, yet oddly charming?",
+    "What did the U.S. airdrop to the children of Afghanistan?",
+    "What helps Obama unwind?",
+    "What's there a ton of in heaven?",
+    "Major League Baseball has banned {} for giving players an unfair advantage.",
+    "When I am a billionaire, I shall erect a 50-foot statue to commemorate {}.",
+    "What's the new fad diet?",
+    "When I am the President of the United States, I will create the Department of {}.",
+    "{}. It's a trap!",
+    "How am I maintaining my relationship status?",
+    "What will I bring back in time to convince people that I am a powerful wizard?",
+    "While the United States raced the Soviet Union to the moon, the Mexican government funneled millions of pesos into research on {}.",
+    "Coming to Broadway this season, {}: The Musical.",
+    "What's my secret power?",
+    "What gives me uncontrollable gas?",
+    "But before I kill you, Mr. Bond, I must show you {}.",
+    "What never fails to liven up the party?",
+    "What am I giving up for Lent?",
+    "What do old people smell like? ",
+    "The class field trip was completely ruined by {}.",
+    "When Pharaoh remained unmoved, Moses called down a plague of {}.",
+    "I do not know with which weapons World War III will be fought, but World War IV will be fought with {}.",
+    "What's Teach for America using to inspire inner city students to succeed?",
+    "In Michael Jackson's final moments, he thought about {}.",
+    "Why do I hurt all over?",
+    "Studies show that lab rats navigate mazes 50% faster after being exposed to {}.",
+    "Why am I sticky?",
+    "What's my anti-drug?",
+    "And the Academy Award for {} goes to {}.",
+    "For my next trick, I will pull {} out of {}.",
+    "{}: Good to the last drop.",
+    "What did Vin Diesel eat for dinner?",
+    "{}: kid-tested, mother-approved.",
+    "What gets better with age?",
+    "I never truly understood {} until I encountered {}.",
+    "Rumor has it that Vladimir Putin's favorite delicacy is {} stuffed with {}.",
+    "Lifetime&reg; presents {  the story of {}.",
+    "Make a haiku.",
+    "In M. Night Shyamalan's new movie, Bruce Willis discovers that {} had really been {} all along.",
+    "{} is a slippery slope that leads to {}.",
+    "In a world ravaged by {  our only solace is {}.",
+    "That's right, I killed {}. How, you ask? {}.",
+    "When I was tripping on acid, {} turned into {}.",
+    "{} + {} = {}.",
+    "What's the next superhero\/sidekick duo?",
+    "Dear Abby,<br><br>I'm having some trouble with {} and would like your advice.",
+    "After the earthquake, Sean Penn brought {} to the people of Haiti.",
+    "In L.A. County Jail, word is you can trade 200 cigarettes for {}.",
+    "Maybe she's born with it. Maybe it's {}.",
+    "Life for American Indians was forever changed when the White Man introduced them to {}.",
+    "Next on ESPN2, the World Series of {}.",
+    "Step 1: {}. Step 2: {}. Step 3: Profit.",
+    "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is {}.",
+    "How did I lose my virginity?",
+    "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of {}.",
+    "In 1,000 years, when paper money is a distant memory, how will we pay for goods and services?",
+    "What don't you want to find in your Kung Pao chicken?",
+    "The Smithsonian Museum of Natural History has just opened an exhibit on {}.",
+    "Daddy, why is Mommy crying?"
   ],
   "whiteCards": [
     "Coat hanger abortions.",
